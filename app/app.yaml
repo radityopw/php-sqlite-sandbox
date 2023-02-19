@@ -1,0 +1,9 @@
+runtime: php74
+
+env_variables:
+    GOOGLE_STORAGE_BUCKET: ""
+    GOOGLE_PROJECT_ID: ""
+
+handlers:
+  - url: /res
+    static_dir: res
