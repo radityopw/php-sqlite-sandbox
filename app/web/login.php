@@ -9,12 +9,15 @@
 		<article>
 			<h3>Harap Login Dahulu</h3>
 			<hr>
+			<?php if(!$is_auth):?>
+			<code><?=$error_message?></code>
+			<?php endif;?>
 			<fieldset>
 				<form method="POST" action="/login_auth"> 
 					<label>Email : </label>
-					<input type="text" id="email" name="_email" />
+					<input type="text" id="email" name="email" />
 					<label>Passkey : </label>
-					<input type="password" id="passkey" name="_passkey" />
+					<input type="password" id="passkey" name="passkey" />
 					
 					<input type="hidden" id="is_login" name="is_login" value="1" />
 					<label></label>
